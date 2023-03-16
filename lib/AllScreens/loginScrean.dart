@@ -34,6 +34,7 @@ class loginScreen extends StatelessWidget {
           SizedBox(
             height: 1.0,
           ),
+          
           Text(
             "Login as a rider",
             style: TextStyle(fontSize: 25, fontFamily: "bolt-semibold"),
