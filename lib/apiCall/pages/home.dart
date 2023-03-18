@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
   Widget _getPostList(context){
     return Scaffold(
     appBar: AppBar(
-      title: Text("Rest Api Example"),
+      title: Text("Rest Api Example demo"),
 
     ),
 
