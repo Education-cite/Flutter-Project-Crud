@@ -4,6 +4,8 @@ import 'package:myproject/AllScreens/loginScrean.dart';
 import 'package:myproject/AllScreens/mainScreen.dart';
 import 'package:myproject/AllScreens/resistration.dart';
 
+import 'apiCall/pages/home.dart';
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -21,12 +23,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: mainScreen.idScreen,
+     // initialRoute: mainScreen.idScreen,
+      initialRoute: "/home",
      // home: resistration(),
       routes: {
         resistration.idScreen:(context)=>resistration(),
         loginScreen.idScreen:(context)=>loginScreen(),
-        mainScreen.idScreen:(context)=>mainScreen()
+        mainScreen.idScreen:(context)=>mainScreen(),
+        "/home":(context)=>Home()
       },
     );
   }
