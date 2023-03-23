@@ -22,4 +22,17 @@ class ApiService{
   }
 
 
+
+  Future<void> deletePosts(int?id) async{
+    try{
+      var url = Uri.parse(ApiConstants.baseUrl + ApiConstants.postEndpoint + "/" +'${id}');
+      var response = await http.delete(url);
+      if(response.statusCode==200){
+       print("case deleted");
+      }
+    }catch(e){
+      log(e.toString());
+    }
+  }
+
 }
